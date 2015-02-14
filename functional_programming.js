@@ -73,15 +73,11 @@ _.chain(movieLists)
       var boxart = _.reduce(video.boxarts, function(memory, element) {
           return memory.width < element.width ? memory : element;
       });
-
       return {"id": video.id, "title": video.title, "boxart": boxart.url}
   })
   .value()
 
-
-
-
-
+// OUTPUT
 // [
 // {"id": 675465,"title": "Fracture","boxart":"http://cdn-0.nflximg.com/images/2891/Fracture120.jpg" },
 // {"id": 65432445,"title": "The Chamber","boxart":"http://cdn-0.nflximg.com/images/2891/TheChamber130.jpg" },
