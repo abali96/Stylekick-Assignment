@@ -66,18 +66,17 @@ var movieLists = [
 ];
 
 
-var result = _.map(movieLists, function(type) {
-  return type.videos;
-});
+_.chain(movieLists)
+  .map(function(type) { return type.videos;})
+  .flatten()
+  .map(function(video) {
+      var boxart = _.reduce(video.boxarts, function(memory, element) {
+          return memory.width < element.width ? memory : element;
+      });
 
-result = _.flatten(result);
-
-_.map(result, function(video) {
-    var boxart = _.reduce(video.boxarts, function(memory, element) {
-        return memory.width < element.width ? memory : element;
-    });
-  return {"boxart": boxart.url, "title": video.title, "id": video.id}
-});
+      return {"id": video.id, "title": video.title, "boxart": boxart.url}
+  })
+  .value()
 
 
 
