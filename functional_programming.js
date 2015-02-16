@@ -71,7 +71,7 @@ _.chain(movieLists)
   .flatten()
   .map(function(video) {
       var boxart = _.reduce(video.boxarts, function(memory, element) {
-          return memory.width < element.width ? memory : element;
+          return memory.width < element.width ? memory : element; // finding lowest value - can set to finding 150px if really necessary
       });
       return {"id": video.id, "title": video.title, "boxart": boxart.url}
   })
