@@ -3,7 +3,7 @@ function groupBySum(input, num) {
     return input;
 
   var returnArr = [];
-  input = input.sort();
+  input.sort();
 
   while (input.length > 0) {
     if (input[0] > num) // used to ignore values greater than 'num'
