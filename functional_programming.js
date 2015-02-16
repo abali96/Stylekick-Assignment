@@ -66,8 +66,8 @@ var movieLists = [
 ];
 
 
-_.chain(movieLists)
-  .map(function(type) { return type.videos;})
+_.chain(movieLists) // not sure if calling 'chain' is against the rules but it just makes the code cleaner :)
+  .map(function(type) { return type.videos; })
   .flatten()
   .map(function(video) {
       var boxart = _.reduce(video.boxarts, function(memory, element) {
