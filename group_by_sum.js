@@ -37,13 +37,14 @@ console.log(groupBySum(exampleArr, 3));
 // note: method assumes you can destroy input array.
 
 // TEST CASES
-// Works with a 'num' parameter value greater than the total sum of the array - simply returns the input array, sorted
+// Works with a 'num' parameter value greater than the total sum of the array - simply returns the sorted input array
 // Works with 'num' parameter value of 0 - simply returns the input array
-// Rejects numbers larger than the value of the 'num' parameter by adding them to the end of the array in their own subarray
-  // Input of [1,1,2,3,1,6,1,1,1,2,2,2,2] grouping by 3 returns [[1,2],[1,2],[1,2],[1,2],[1,2],[1],[3],[6]]
-// Note that this is the example you provided in the addition note; the reuslt obtained is the 'better' solution you proposed!
+// Rejects numbers larger than the value of the 'num' parameter
+  // OPTIONAL: Input of [1,1,2,3,1,6,1,1,1,2,2,2,2] grouping by 3 can return [[1,2],[1,2],[1,2],[1,2],[1,2],[1],[3],[6]]
+  // if you uncomment the noted lines in the function
+// Note that this is the example you provided in the addition note; the result obtained is the 'better' solution you proposed!
 
-// places to improve:
+// Places to improve:
 // Given var exampleArr = [1,2,1,1,1,2,2,1,1];
 // the output is "[[1,2,1],[1,2,1],[1,2],[2]]"
 // This is not ideal as the last two arrays can be permutated differently to get
